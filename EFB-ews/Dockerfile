@@ -55,4 +55,6 @@ RUN set -ex \
         && sed -i 's/channel_emoji = "💬"/channel_emoji = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/lib/python3.8/site-packages/efb_wechat_slave/__init__.py \
         && sed -i "s/{self.chat_type_emoji}/丨/g" /usr/lib/python3.8/site-packages/efb_telegram_master/chat.py
         
+        
+
 CMD ["ehforwarderbot"]
