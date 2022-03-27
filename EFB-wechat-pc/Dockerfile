@@ -12,6 +12,7 @@ RUN set -ex \
         libmagic \
         tiff \
         libwebp \
+        gcc \
         freetype \
         lcms2 \
         openjpeg \
