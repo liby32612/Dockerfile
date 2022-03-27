@@ -47,8 +47,8 @@ RUN set -ex \
         && pip3 install wheel six \
         && pip3 install git+https://github.com/ehForwarderBot/ehForwarderBot.git \
         && pip3 install git+https://github.com/ehForwarderBot/efb-telegram-master.git \
-        && pip3 install -U git+https://github.com/tedrolin/python-wechatPc \
-        && pip3 install -U git+https://github.com/tedrolin/efb-wechat-pc-slave \
+        && pip3 install git+https://github.com/tedrolin/python-wechatPc.git \
+        && pip3 install git+https://github.com/tedrolin/efb-wechat-pc-slave.git \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware.git \
         && pip3 install lottie \
         && pip3 install cairosvg \
