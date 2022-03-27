@@ -22,7 +22,6 @@ RUN set -ex \
         py3-pillow \
         py3-requests \
         python3-dev \
-        python3-wheel \
         py3-pip \
         py3-cryptography \
         py3-decorator \
