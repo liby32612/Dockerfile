@@ -52,7 +52,7 @@ RUN set -ex \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware.git \
         && pip3 install lottie \
         && pip3 install cairosvg \
-        && sed -i 's/channel_emoji: str = "💬🖥️"/channel_emoji: str = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/lib/python3.9/site-packages/efb-wechat-pc-slave/__init__.py \
+        && sed -i 's/channel_emoji: str = "💬🖥️"/channel_emoji: str = "𝙒𝙚𝙘𝙝𝙖𝙩"/g' /usr/lib/python3.9/site-packages/efb_wechat_pc_slave/__init__.py \
         && sed -i "s/{self.chat_type_emoji}/丨/g" /usr/lib/python3.9/site-packages/efb_telegram_master/chat.py
 
 CMD ["ehforwarderbot"]
