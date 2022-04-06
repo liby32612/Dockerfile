@@ -1,5 +1,4 @@
-
-FROM python:alpine
+FROM nevinee/alpine-s6
 LABEL maintainer="Evine Deng <evinedeng@foxmail.com>"
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     HOME=/root \
@@ -8,8 +7,9 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     PS1="\u@\h:\w \$ "
 RUN apk update -f \
     && apk --no-cache add -f \
+       python3-dev \
+       py3-pip \
        bash \
-       s6-overlay \
        openssl \
        coreutils \
        moreutils \
@@ -23,7 +23,9 @@ RUN apk update -f \
        clang \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
+    && ln -s /usr/bin/python3 /usr/bin/python \
     && python -m pip install --upgrade pip \
+    && pip install wheel \
     && rm -rf \
        /tmp/* \
        /root/.cache
