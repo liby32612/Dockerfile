@@ -45,7 +45,6 @@ RUN set -ex \
 
 RUN set -ex \
         && pip3 install wheel six \
-        && pip3 install --upgrade pip \
         && pip3 install -U git+https://github.com/ehForwarderBot/ehForwarderBot.git \
         && pip3 install -U git+https://github.com/ehForwarderBot/efb-telegram-master.git \
         && pip3 install -U git+https://github.com/shejialuo/efb-wechat-slave.git \
