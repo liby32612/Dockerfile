@@ -51,6 +51,6 @@ RUN set -ex \
         && pip3 install git+https://github.com/shejialuo/efb-wechat-slave.git \
         && pip3 install git+https://github.com/ehForwarderBot/efb-link_preview-middleware.git \
         && pip3 install lottie \
-        && pip3 install cairosvg \
+        && pip3 install cairosvg
 
 CMD ["ehforwarderbot"]
